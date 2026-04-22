@@ -58,3 +58,37 @@ Se non impostate questi dati, GitHub non collegherà il codice al vostro account
 git config --global user.name "Il Vostro Nome e Cognome"
 git config --global user.email "la.vostra.email@esempio.com"
 ```
+
+---
+
+## 3. Autenticazione di Rete (Lo Standard Industriale)
+
+Configurare nome ed email non vi fa "loggare" su GitHub, serve solo a firmare i vostri commit. Per permettere al terminale di inviare codice ai server di GitHub, dovete autenticarvi. Dimenticate le password: si usa il protocollo crittografico tramite la GitHub CLI
+
+**Step 1**: Installare GitHub CLI (gh)
+
+- **Windows:** Aprite PowerShell come Amministratore e digitate: winget install --id GitHub.cli
+
+- **macOS:** Aprite il terminale e digitate: brew install gh (Richiede Homebrew)
+
+- **Linux:** Aprite il terminale e digitate:
+  curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg && echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null && sudo apt update && sudo apt install gh -y
+
+**Step 2:** Il Login
+Chiudete e riaprite il terminale. Digitate questo comando:
+
+```bash
+gh auth login
+```
+
+Seguite le istruzioni interattive a schermo. Quando richiesto:
+
+1. Scegliete GitHub.com
+
+2. Scegliete HTTPS
+
+3. Rispondete Yes alla domanda "Authenticate Git with your GitHub credentials?"
+
+4. Scegliete Login with a web browser
+
+Copiate il codice a 8 cifre generato dal terminale, premete Invio per aprire il browser, incollate il codice e autorizzate.
