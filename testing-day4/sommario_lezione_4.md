@@ -23,7 +23,7 @@ Dimenticate Google Drive. Dimenticate i file chiamati `progetto_finale_v3_VERO.p
 - **`git add <nome_file>`** (es. `git add main.py`)
   Il file diventa verde. Lo abbiamo spostato nella Staging Area. Lo abbiamo messo nella scatola, ma non è ancora nella cassaforte
 - **`git commit -m "feat: setup iniziale del progetto"`**
-  Il Commit è il sigillo e il messaggio deve spiegare il _'perché'_ della modifica. Scrivere 'fix' o 'aggiornamento' è motivo di bocciatura automatica della vostra Pull Request
+  Il Commit è il sigillo e il messaggio deve spiegare il _'perché'_ della modifica. Scrivere 'fix' o 'aggiornamento' è motivo di bocciatura automatica della vostra Pull Request (https://www.conventionalcommits.org/en/v1.0.0/)
 
 ---
 
